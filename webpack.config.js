@@ -3,6 +3,7 @@
 const devCerts = require("office-addin-dev-certs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { DefinePlugin } = require("webpack");
 
 const urlDev = "https://localhost:3000/";
 const urlProd = "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/outlook-hello-world";

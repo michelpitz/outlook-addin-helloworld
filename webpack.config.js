@@ -50,6 +50,10 @@ module.exports = async (env, options) => {
       ],
     },
     plugins: [
+      new webpack.DefinePlugin({
+        "process.env.CLIENT_ID": JSON.stringify(process.env.CLIENT_ID),
+        "process.env.TEST_ID": JSON.stringify(process.env.TEST_ID),
+      }),
       new HtmlWebpackPlugin({
         filename: "taskpane.html",
         template: "./taskpane.html",
@@ -81,7 +85,10 @@ module.exports = async (env, options) => {
       },
       server: {
         type: "https",
-        options: env.WEBPACK_BUILD || options.https !== undefined ? options.https : await getHttpsOptions(),
+        options:
+          env.WEBPACK_BUILD || options.https !== undefined
+            ? options.https
+            : await getHttpsOptions(),
       },
       port: process.env.npm_package_config_dev_server_port || 3000,
     },

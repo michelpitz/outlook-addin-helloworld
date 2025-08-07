@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { DefinePlugin } = require("webpack");
 
 const urlDev = "https://localhost:3000/";
-const urlProd = "https://officedev.github.io/Office-Add-in-samples/Samples/hello-world/outlook-hello-world";
+const urlProd = "https://webapp-test1-h4fud8g8fdaea2c9.westeurope-01.azurewebsites.net/";
 
 async function getHttpsOptions() {
   const httpsOptions = await devCerts.getHttpsServerOptions();

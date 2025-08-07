@@ -50,7 +50,7 @@ module.exports = async (env, options) => {
       ],
     },
     plugins: [
-      new webpack.DefinePlugin({
+      new DefinePlugin({
         "process.env.CLIENT_ID": JSON.stringify(process.env.CLIENT_ID),
         "process.env.TEST_ID": JSON.stringify(process.env.TEST_ID),
       }),
